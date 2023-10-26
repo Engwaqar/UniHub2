@@ -1,0 +1,6 @@
+module Pods_UniHub_UniHubTests {
+  umbrella header "Pods-UniHub-UniHubTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

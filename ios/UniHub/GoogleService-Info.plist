@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>444829181838-re2ievdi8gotvjqr4bc8vim6d4c3vtbj.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.444829181838-re2ievdi8gotvjqr4bc8vim6d4c3vtbj</string>
+	<key>API_KEY</key>
+	<string>AIzaSyDKJTVh1l_WmdhN_6ZRREu6BHBAVqUeaJw</string>
+	<key>GCM_SENDER_ID</key>
+	<string>444829181838</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.unihub</string>
+	<key>PROJECT_ID</key>
+	<string>unihub-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>unihub-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:444829181838:ios:a45f3a19b16829fc60a6df</string>
+	<key>DATABASE_URL</key>
+	<string>https://unihub-app-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>
