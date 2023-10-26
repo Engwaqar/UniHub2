@@ -53,6 +53,7 @@ const arrow_Down = require("../assets/icons/ArrowDown.png");
 const Noti_Icon = require("../assets/icons/Notification.png");
 const DeleteIcon = require("../assets/icons/Delete.png");
 const QR_CODE = require("../assets/icons/QRCode.png");
+const Filer_Icon = require("../assets/icons/Filter.png");
 
 export const globalPath = {
   plusU,
@@ -104,5 +105,6 @@ export const globalPath = {
   arrow_Down,
   Noti_Icon,
   DeleteIcon,
-  QR_CODE
+  QR_CODE,
+  Filer_Icon
 };

@@ -59,6 +59,8 @@ import OrderSummery from "../screens/Account/OrderSummery";
 import AddCard from "../screens/Account/AddCard";
 import Promotion from "../screens/Promote/Promotion";
 import BarcodeReader from "../screens/Scanner/BarcodeReader";
+import Dashboard from "../screens/DashBoard/Dashboard";
+
 const Stack = createNativeStackNavigator();
 
 function HomeStack() {
@@ -174,6 +176,9 @@ function HomeStack() {
       <Stack.Screen name={routeName.B_TO_S_PRODUCTS} component={BToSProduct} />
       {/* {Scanner} */}
       <Stack.Screen name={routeName.BARCODE_READER} component={BarcodeReader} />
+       {/* {Dashboard} */}
+      <Stack.Screen name={routeName.EVENTS_DASHBOARD} component={Dashboard} />
+
     </Stack.Navigator>
   );
 }

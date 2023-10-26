@@ -20,6 +20,7 @@ const SmallButton = ({
   fontFamily,
   onPress,
   position,
+  TextSize,
   ...props
 }) => {
   return (
@@ -37,7 +38,7 @@ const SmallButton = ({
     >
       {title && (
         <ResponsiveText
-          size={3.7}
+          size={TextSize ? TextSize : 3.7}
           padding={[0, 10]}
           fontFamily={fontFamily ? fontFamily : "Bold"}
           color={textColor ? textColor : colors.white}
@@ -45,7 +46,6 @@ const SmallButton = ({
           {title}
         </ResponsiveText>
       )}
-      
     </TouchableOpacity>
   );
 };
@@ -59,10 +59,10 @@ const styles = StyleSheet.create({
     borderBottomLeftRadius: 15,
     justifyContent: "space-around",
     alignItems: "center",
-    alignSelf:'center',
+    alignSelf: "center",
     backgroundColor: colors.primary,
     height: hp(7),
-    width:wp(85),
+    width: wp(85),
     flexDirection: "row",
   },
 });
