@@ -63,7 +63,7 @@ const BarcodeReader = ({ navigation }) => {
           </View>
       }
       <View style={{ flex: 0.2, justifyContent: 'center', alignItems: 'center', paddingBottom: 30, backgroundColor:colors.black3}}>
-        <ResponsiveText size={7} color={colors.primary} >{scan ? "Scan QR" : "QR Data"}</ResponsiveText>
+        <ResponsiveText size={7} color={colors.primary} >{scan ? "Ticket Scanner" : "QR Data"}</ResponsiveText>
       </View>
       <SafeAreaView>
         <View >

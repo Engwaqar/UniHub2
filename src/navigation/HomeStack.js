@@ -60,6 +60,8 @@ import AddCard from "../screens/Account/AddCard";
 import Promotion from "../screens/Promote/Promotion";
 import BarcodeReader from "../screens/Scanner/BarcodeReader";
 import Dashboard from "../screens/DashBoard/Dashboard";
+import Messages from "../screens/Chat/Messages";
+import ChatInbox from "../screens/Chat/ChatInbox";
 
 const Stack = createNativeStackNavigator();
 
@@ -178,6 +180,9 @@ function HomeStack() {
       <Stack.Screen name={routeName.BARCODE_READER} component={BarcodeReader} />
        {/* {Dashboard} */}
       <Stack.Screen name={routeName.EVENTS_DASHBOARD} component={Dashboard} />
+       {/* {ChatBox} */}
+      <Stack.Screen name={routeName.MESSANGER} component={Messages} />
+      <Stack.Screen name={routeName.CHATBOX} component={ChatInbox} />
 
     </Stack.Navigator>
   );

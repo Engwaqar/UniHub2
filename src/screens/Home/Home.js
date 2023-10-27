@@ -15,7 +15,9 @@ import SmallButton from "../../components/SmallButton";
 const Home = ({ navigation }) => {
   return (
     <SafeAreaView style={styles.mainContainer} edges={["top", "left", "right"]}>
-      <ChatHeader onPress={() => navigation.navigate(routeName.PROFILE)} />
+      <ChatHeader onPress={() => navigation.navigate(routeName.PROFILE)}
+      ChatNav={() =>navigation.navigate(routeName.MESSANGER)}
+      />
       <View
         style={{
           paddingHorizontal: wp(5),

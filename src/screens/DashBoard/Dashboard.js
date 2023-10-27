@@ -56,17 +56,17 @@ const Dashboard = ({ navigation }) => {
           }}
         >
           <View style={{ marginTop: 20 }}>
-              <SmallDropDown
-                borderColor={colors.black}
-                width={wp(17)}
-                height={hp(2.4)}
-                data={mycat.map((v) => v.title)}
-                onSelect={(item) => {
-                  var id = mycat.find((v) => v.title == item)?.id;
-                  setSelectedCategory(id);
-                }}
-              />
-            </View>
+            <SmallDropDown
+              borderColor={colors.black}
+              width={wp(17)}
+              height={hp(2.4)}
+              data={mycat.map((v) => v.title)}
+              onSelect={(item) => {
+                var id = mycat.find((v) => v.title == item)?.id;
+                setSelectedCategory(id);
+              }}
+            />
+          </View>
           <View
             style={{
               flexDirection: "row",
@@ -79,14 +79,14 @@ const Dashboard = ({ navigation }) => {
               btnStyle={{ height: hp(4), width: wp(33), marginTop: hp(0.5) }}
               title={"Withdraw funds"}
               TextSize={3}
-            //   onPress={() => navigation.navigate(routeName.EVENTS_DASHBOARD)}
+              //   onPress={() => navigation.navigate(routeName.EVENTS_DASHBOARD)}
             />
             <SmallButton
               fontFamily={"100"}
               btnStyle={{ height: hp(4), width: wp(33), marginTop: hp(0.5) }}
               title={"Add New Event"}
               TextSize={3}
-            //   onPress={() => navigation.navigate(routeName.EVENTS_DASHBOARD)}
+              //   onPress={() => navigation.navigate(routeName.EVENTS_DASHBOARD)}
             />
           </View>
           <View style={styles.Card_View}>
@@ -122,7 +122,7 @@ const Dashboard = ({ navigation }) => {
                 $5,789
               </ResponsiveText>
             </View>
-            <View style={{ alignItems: "center",marginTop:hp(2) }}>
+            <View style={{ alignItems: "center", marginTop: hp(2) }}>
               <Graph />
             </View>
           </View>
@@ -184,7 +184,9 @@ const Dashboard = ({ navigation }) => {
                 alignItems: "center",
               }}
             >
-              <ResponsiveText margin={[10,0,7,0]} size={5}>Events</ResponsiveText>
+              <ResponsiveText margin={[10, 0, 7, 0]} size={5}>
+                Events
+              </ResponsiveText>
               <SmallDropDown
                 borderColor={colors.black}
                 width={wp(17)}
@@ -243,11 +245,11 @@ const Dashboard = ({ navigation }) => {
             />
           </View>
           <SmallButton
-          fontFamily={'100'}
+            fontFamily={"100"}
             btnStyle={{ height: hp(5), width: wp(33), marginTop: hp(3) }}
             title={"Scan"}
             TextSize={4}
-            // onPress={() => navigation.navigate(routeName.EVENTS_DASHBOARD)}
+            onPress={() => navigation.navigate(routeName.BARCODE_READER)}
           />
         </View>
       </ScrollView>
@@ -259,7 +261,11 @@ export default Dashboard;
 
 const styles = StyleSheet.create({
   mainContainer: { flex: 1, padding: wp(5) },
-  box: { flexDirection: "row", justifyContent: "center", marginTop: hp(1.5) },
+  box: {
+    flexDirection: "row",
+    justifyContent: "center",
+    marginTop: hp(1.5),
+  },
   Card_View: {
     backgroundColor: colors.white,
     marginTop: hp(2),

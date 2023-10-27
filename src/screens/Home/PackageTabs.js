@@ -11,9 +11,9 @@ const PackageTabs = ({ title, source, onPress, price, isSelected }) => {
     return (
         <TouchableOpacity onPress={onPress}
             style={styles.IconStyle}>
-            <ResponsiveText margin={[0, 0, 0, 0]}  color={colors.black} >{title}</ResponsiveText>
+            <ResponsiveText size={2.3} color={colors.black} >{title}</ResponsiveText>
             <View style={{ flexDirection: 'row', alignItems: 'center', justifyContent: 'space-between', width: '100%', marginTop: 5 }} >
-                <ResponsiveText margin={[0, 0, 0, 0]} size={2.5} color={colors.grey1} >{price}</ResponsiveText>
+                <ResponsiveText  size={2.5} color={colors.grey1} >{price}</ResponsiveText>
                 <RadioButton onPress={onPress} checked={isSelected} />
             </View>
         </TouchableOpacity>
@@ -23,16 +23,7 @@ const PackageTabs = ({ title, source, onPress, price, isSelected }) => {
 export default PackageTabs;
 
 const styles = StyleSheet.create({
-    container: {
-        marginTop: hp(2),
-        width: wp(45),
-        height: hp(15),
-        // alignItems: "center",
-        justifyContent: 'center',
-        // alignSelf:'center'   
-    },
     IconStyle: {
-
         backgroundColor: colors.background,
         width: wp(25),
         height: hp(9),

@@ -15,6 +15,7 @@ import Dots from "../../components/Dots";
 import moment from "moment";
 import RecordNotFound from "../../components/RecordnotFound";
 import Loader from "../../components/Loader";
+import ServiceSwiper from "../Home/ServiceSwiper";
 
 const HubServiceList = ({ navigation }) => {
   const dispatch = useDispatch();
@@ -29,21 +30,143 @@ const HubServiceList = ({ navigation }) => {
   useEffect(() => {
     dispatch(getAllHubServices());
   }, []);
-
+  const DataImg = [
+    {
+      id: 1,
+      url: require("../../assets/icons/image.jpeg"),
+    },
+    {
+      id: 2,
+      url: require("../../assets/icons/image.jpeg"),
+    },
+    {
+      id: 3,
+      url: require("../../assets/icons/image.jpeg"),
+    },
+    {
+      id: 4,
+      url: require("../../assets/icons/image.jpeg"),
+    },
+  ];
+  const ListData = [
+    {
+      id: 1,
+      title: "Service",
+      Edit: "Edit",
+      Preview: "Preview",
+      Share: "Share",
+    },
+    {
+      id: 2,
+      title: "Service",
+      Edit: "Edit",
+      Preview: "Preview",
+      Share: "Share",
+    },
+    {
+      id: 3,
+      title: "Service",
+      Edit: "Edit",
+      Preview: "Preview",
+      Share: "Share",
+    },
+    {
+      id: 4,
+      title: "Service",
+      Edit: "Edit",
+      Preview: "Preview",
+      Share: "Share",
+    },
+  ];
   return (
     <SafeAreaView style={styles.mainContainer} edges={["top", "left", "right"]}>
-      <MainHeader navigation={navigation} title={"Advertise Hub Service"} />
-      <View style={{ marginTop: hp(3), marginBottom: hp(4), marginLeft: 15 }}>
-        <Dots style={{ marginVertical: hp(3) }} />
-        <ResponsiveText weight={"bold"} size={5} color={colors.primary}>
-          Your Hub Service{" "}
+      <MainHeader navigation={navigation} title={"My Service"} />
+      <View style={{ marginBottom: hp(4), marginLeft: 15 }}>
+        <View style={styles.banner}>
+          <ServiceSwiper data={DataImg} />
+        </View>
+        <ResponsiveText size={5} color={colors.black}>
+          Business Details Goes Here{" "}
         </ResponsiveText>
-        <ResponsiveText size={3.5} color={colors.grey1}>
-          Checkout our products provided by one expert vendors and select the
-          needed one.
+        <ResponsiveText size={2.5} color={colors.grey1}>
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry’s standard dummy text ever
+          since the 1500s,
         </ResponsiveText>
+        <ResponsiveText
+          margin={[10, 0, 0, 0]}
+          weight={"bold"}
+          size={4.2}
+          color={colors.primary}
+          textDecorationLine={'underline'}
+        >
+          Services
+        </ResponsiveText>
+        <View
+          style={{
+            padding: hp(3),
+            marginTop: hp(1),
+            backgroundColor: colors.primary,
+            borderRadius: 25,
+            marginHorizontal: wp(1),
+          }}
+        >
+          {ListData.map((item) => {
+            return (
+              <View
+                style={{
+                  flexDirection: "row",
+                  justifyContent: "space-between",
+                  marginTop: hp(0.5),
+                }}
+              >
+                <ResponsiveText size={3.5} color={colors.white}>
+                  {item.title}
+                </ResponsiveText>
+                <View style={{ flexDirection: "row" }}>
+                  <TouchableOpacity>
+                    <ResponsiveText
+                      margin={[0, 10, 0, 0]}
+                      size={3.5}
+                      color={colors.white}
+                      textDecorationLine={'underline'}
+                    >
+                      {item.Edit}
+                    </ResponsiveText>
+                  </TouchableOpacity>
+                  <TouchableOpacity>
+                    <ResponsiveText
+                      margin={[0, 10, 0, 0]}
+                      size={3.5}
+                      color={colors.white}
+                      textDecorationLine={'underline'}
+                    >
+                      {item.Preview}
+                    </ResponsiveText>
+                  </TouchableOpacity>
+                  <TouchableOpacity>
+                    <ResponsiveText
+                      margin={[0, 10, 0, 0]}
+                      size={3.5}
+                      color={colors.white}
+                    >
+                      {item.Share}
+                    </ResponsiveText>
+                  </TouchableOpacity>
+                </View>
+              </View>
+            );
+          })}
+        </View>
+        <SmallButton
+          btnStyle={{ height: hp(5), width: wp(28), marginTop: hp(3) }}
+          title={"Boost"}
+          TextSize={3}
+          onPress={() => navigation.navigate(routeName.PROMOTION)}
+        />
       </View>
-      <View
+
+      {/* <View
         style={{
           flexDirection: "row",
           alignItems: "center",
@@ -60,8 +183,8 @@ const HubServiceList = ({ navigation }) => {
           title={"Add Hub Service"}
           onPress={() => navigation.navigate(routeName.SELL_HUB_SERVICE)}
         />
-      </View>
-      <View
+      </View> */}
+      {/* <View
         style={{
           flexDirection: "row",
           justifyContent: "space-around",
@@ -84,11 +207,11 @@ const HubServiceList = ({ navigation }) => {
         {/* <ResponsiveText size={3.7} color={colors.black}>
           Status
         </ResponsiveText> */}
-        <ResponsiveText size={3.7} color={colors.black}>
+      {/* <ResponsiveText size={3.7} color={colors.black}>
           Action
-        </ResponsiveText>
-      </View>
-      {HubServices?.length > 0 ? (
+        </ResponsiveText> */}
+      {/* </View> */}
+      {/* {HubServices?.length > 0 ? (
         HubServices.map((item) => {
           return (
             <View
@@ -131,7 +254,7 @@ const HubServiceList = ({ navigation }) => {
                                     Edit
                                 </ResponsiveText>
                             </TouchableOpacity> */}
-              <View style={styles.Text_box}>
+      {/* <View style={styles.Text_box}>
                 <SmallButton
                   btnStyle={{ height: hp(3), width: wp(20) }}
                   title={"Edit"}
@@ -161,7 +284,7 @@ const HubServiceList = ({ navigation }) => {
         })
       ) : loading == false ? (
         <RecordNotFound />
-      ) : null}
+      ) : null} */}
       {loading && <Loader />}
     </SafeAreaView>
   );
@@ -180,5 +303,11 @@ const styles = StyleSheet.create({
     width: wp(15),
     alignItems: "center",
     paddingVertical: hp(1),
+  },
+  banner: {
+    height: hp(23),
+    width: wp(100),
+    alignSelf: "center",
+    marginVertical: hp(2),
   },
 });
